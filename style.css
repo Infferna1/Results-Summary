@@ -1,0 +1,125 @@
+:root {
+  --background-white: hsl(0, 0%, 100%);
+
+  --background-slate-blue: hsl(252, 100%, 67%);
+  --background-royal-blue: hsl(241, 81%, 54%);
+
+  --circle-violet-blue: hsla(256, 72%, 46%, 1);
+  --circle-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/assets/fonts/static/HankenGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  display: flex;
+  align-content: space-between;
+}
+
+/* LEFT SIDE */
+.container article:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    var(--background-slate-blue),
+    var(--background-royal-blue)
+  );
+  border-radius: 1rem;
+  color: var(--background-white);
+  font-family: "Hanken Grotesk";
+  font-weight: normal;
+}
+
+.container article:first-child h2 {
+  font-weight: 700;
+}
+
+.container article:first-child p:nth-child(4) {
+  color: var(--pale-blue);
+  text-align: center;
+}
+
+.container article:first-child header {
+  color: var(--pale-blue);
+  font-weight: 700;
+}
+
+/* CIRCLE */
+.circle {
+  background: linear-gradient(
+    var(--circle-violet-blue),
+    var(--circle-persian-blue)
+  );
+  border-radius: 50%;
+  padding: 3rem;
+  width: 150px;
+  height: 150px;
+}
+
+.circle span {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.circle p {
+  color: var(--light-lavender);
+  margin-top: -0.5rem;
+}
+
+.circle span h1 {
+  margin-top: -1rem;
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+/* RIGHT SIDE */
+.container article:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
